@@ -22,6 +22,8 @@ export default () => {
             const { chatMessage } = e.target.elements
             if (chatMessage.value != '') setMessages([].concat(messages, [[username, chatMessage.value]]));
             chatMessage.value = ''
+
+            e.target.blur();
         } catch (err) {
             console.log(err);
         }

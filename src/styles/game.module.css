@@ -70,18 +70,17 @@
     margin-bottom: 10px;
     display: flex;
     flex-direction: row;
-
     align-items: center;
 }
-.gameChatInput {
-    height: 100%;
-    flex-grow: 1;
-    background-color: transparent;
-}
-.gameChatSend {
+.gameChatBar > input[type='image'] {
     height: 70%;
     padding-left: 10px;
     padding-right: 5px;
     -webkit-filter: invert(100%);
     filter: invert(100%);
+}
+.gameChatInput {
+    height: 100%;
+    flex-grow: 1;
+    background-color: transparent;
 }

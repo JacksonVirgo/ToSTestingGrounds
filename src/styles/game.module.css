@@ -4,7 +4,7 @@
 
 .gameRoot {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     box-sizing: border-box;
     border: 2px solid white;
     display: flex;

@@ -10,18 +10,12 @@ const ChatMessage = ({ author, message }) => {
     </div>
 }
 
-const ChatBar = () => {
-    return <form onSubmit={(e)=>{e.preventDefault()}}>
-
-    </form>
-}
-
 export default () => {
     return <div className={styles.gameRoot}>
         <div className={styles.gameMain}>
             <div className={styles.gamePhase}>Day 1 - 0:42</div>
             <div className={styles.gameChat}>
-                <ChatMessage author='NashedPotato' message='Message Content' />
+                <ChatMessage author='NashedPotato' message='New Message Content' />
                 <ChatMessage author='NashedPotato' message='Message Content' />
                 <ChatMessage author='NashedPotato' message='Message Content' />
             </div>
@@ -33,7 +27,7 @@ export default () => {
                 <div>🔈</div>
             </div>
             <div className={styles.gameChatBar}>
-                <input type='text' className={styles.gameChatInput} />
+                <input type='text' className={styles.gameChatInput}/>
                 <img className={styles.gameChatSend} src={SendIcon}/>
             </div>
         </div>

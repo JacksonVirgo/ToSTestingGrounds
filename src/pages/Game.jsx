@@ -14,16 +14,17 @@ const ChatMessage = ({ author, message }) => {
 
 export default () => {
     const [username] = useState('ImagineThisIsYourUsername');
-    const [message, setMessage] = useState('');
     const [messages, setMessages] = useState([['Training Bot', 'Hello there. Welcome to TG']]);
 
     const sendMessage = (e) => {
         e.preventDefault();
-        const { chatMessage } = e.target.elements
-
-        if (chatMessage.value != '') setMessages([].concat(messages, [[username, chatMessage.value]]));
-
-        chatMessage.value = ''
+        try {
+            const { chatMessage } = e.target.elements
+            if (chatMessage.value != '') setMessages([].concat(messages, [[username, chatMessage.value]]));
+            chatMessage.value = ''
+        } catch (err) {
+            console.log(err);
+        }
     }
 
     return <div className={styles.gameRoot}>
